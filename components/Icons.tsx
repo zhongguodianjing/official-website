@@ -1,3 +1,4 @@
+
 import { 
   Shield, 
   Globe, 
@@ -26,7 +27,9 @@ import {
   Waves,
   Languages,
   ChevronDown,
-  Check
+  Check,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 export const Icons = {
@@ -57,5 +60,7 @@ export const Icons = {
   Waves,
   Languages,
   ChevronDown,
-  Check
+  Check,
+  Sun, 
+  Moon
 };
