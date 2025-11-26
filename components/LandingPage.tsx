@@ -28,24 +28,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
     { code: 'en', label: 'English' },
   ];
 
-  const getGodConfig = (key: string) => {
-    const map: Record<string, { icon: any, color: string, bg: string, border: string, shadow: string }> = {
-      zeus: { icon: Icons.Zap, color: 'text-yellow-600 dark:text-yellow-300', bg: 'bg-yellow-400/10', border: 'group-hover:border-yellow-400', shadow: 'shadow-yellow-400/20' },
-      hera: { icon: Icons.MonitorPlay, color: 'text-fuchsia-600 dark:text-fuchsia-300', bg: 'bg-fuchsia-400/10', border: 'group-hover:border-fuchsia-400', shadow: 'shadow-fuchsia-400/20' },
-      athena: { icon: Icons.BrainCircuit, color: 'text-blue-600 dark:text-blue-300', bg: 'bg-blue-400/10', border: 'group-hover:border-blue-400', shadow: 'shadow-blue-400/20' },
-      apollo: { icon: Icons.Music, color: 'text-orange-600 dark:text-orange-300', bg: 'bg-orange-400/10', border: 'group-hover:border-orange-400', shadow: 'shadow-orange-400/20' },
-      aphrodite: { icon: Icons.Sparkles, color: 'text-pink-600 dark:text-pink-300', bg: 'bg-pink-400/10', border: 'group-hover:border-pink-400', shadow: 'shadow-pink-400/20' },
-      ares: { icon: Icons.Swords, color: 'text-red-600 dark:text-red-400', bg: 'bg-red-500/10', border: 'group-hover:border-red-500', shadow: 'shadow-red-500/20' },
-      artemis: { icon: Icons.Compass, color: 'text-emerald-600 dark:text-emerald-300', bg: 'bg-emerald-400/10', border: 'group-hover:border-emerald-400', shadow: 'shadow-emerald-400/20' },
-      hermes: { icon: Icons.Rocket, color: 'text-cyan-600 dark:text-cyan-300', bg: 'bg-cyan-400/10', border: 'group-hover:border-cyan-400', shadow: 'shadow-cyan-400/20' },
-      dionysus: { icon: Icons.Utensils, color: 'text-violet-600 dark:text-violet-300', bg: 'bg-violet-400/10', border: 'group-hover:border-violet-400', shadow: 'shadow-violet-400/20' },
-      demeter: { icon: Icons.Leaf, color: 'text-green-600 dark:text-green-400', bg: 'bg-green-500/10', border: 'group-hover:border-green-500', shadow: 'shadow-green-500/20' },
-      hephaestus: { icon: Icons.Hammer, color: 'text-amber-600 dark:text-amber-500', bg: 'bg-amber-600/10', border: 'group-hover:border-amber-600', shadow: 'shadow-amber-600/20' },
-      poseidon: { icon: Icons.Waves, color: 'text-blue-700 dark:text-blue-500', bg: 'bg-blue-600/10', border: 'group-hover:border-blue-600', shadow: 'shadow-blue-600/20' },
-    };
-    return map[key] || map['zeus'];
-  };
-
   const LOGO_URL = "https://placehold.co/200x200/020617/ffffff?text=SEPT+LOGO";
 
   return (
@@ -68,7 +50,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
           </div>
           
           <div className="hidden lg:flex items-center gap-8 text-sm font-bold text-white dark:text-white font-display tracking-wide">
-            {['olympians', 'tokenomics', 'governance', 'assets'].map((item) => (
+            {['tokenomics', 'governance'].map((item) => (
               <a 
                 key={item}
                 href={`#${item}`} 
@@ -172,93 +154,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
               >
                  {t.hero.launch} <Icons.ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="w-full px-8 py-5 bg-slate-800 border border-slate-600 rounded-sm font-display font-bold text-xl hover:bg-slate-700 transition-all text-white hover:border-brand-400 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] z-10">
-                {t.hero.whitepaper}
-              </button>
             </div>
-          </div>
-        </div>
-
-        {/* Live Stats Footer */}
-        <div className="w-full z-30 relative bg-[#0A0F1A]">
-          <div className="w-full border-t border-brand-500 bg-[#0A0F1A] shadow-2xl py-10 relative transition-colors duration-300">
-             {/* Glowing Top Border Effect */}
-             <div className="absolute top-0 left-0 w-full h-[1px] bg-brand-500 shadow-[0_0_15px_#2dd4bf]"></div>
-             
-             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
-                
-                <div className="flex flex-col items-center md:items-start w-full md:w-auto border-b md:border-b-0 border-slate-800 pb-6 md:pb-0">
-                   <span className="text-sm text-white dark:text-white uppercase tracking-[0.25em] font-mono mb-2 font-bold flex items-center gap-2 drop-shadow-sm">
-                     <Icons.TrendingUp size={16} className="text-white" /> {t.hero.stats.price}
-                   </span>
-                   <span className="text-4xl font-mono font-bold text-white dark:text-white flex items-center gap-3 drop-shadow-md">
-                     $1.24 <span className="text-sm text-slate-900 bg-brand-300 dark:bg-brand-300 px-3 py-1 rounded font-bold shadow-[0_0_10px_rgba(94,234,212,0.4)]">+5.2%</span>
-                   </span>
-                </div>
-                
-                <div className="flex flex-col items-center md:items-start w-full md:w-auto border-b md:border-b-0 border-slate-800 pb-6 md:pb-0">
-                   <span className="text-sm text-white dark:text-white uppercase tracking-[0.25em] font-mono mb-2 font-bold flex items-center gap-2 drop-shadow-sm">
-                     <Icons.Hexagon size={16} className="text-white" /> {t.hero.stats.supply}
-                   </span>
-                   <span className="text-4xl font-mono font-bold text-white dark:text-white drop-shadow-md">
-                     21,000,000
-                   </span>
-                </div>
-
-                <div className="flex flex-col items-center md:items-start w-full md:w-auto border-b md:border-b-0 border-slate-800 pb-6 md:pb-0">
-                   <span className="text-sm text-white dark:text-white uppercase tracking-[0.25em] font-mono mb-2 font-bold flex items-center gap-2 drop-shadow-sm">
-                     <Icons.Vote size={16} className="text-white" /> {t.hero.stats.proposals}
-                   </span>
-                   <span className="text-4xl font-mono font-bold text-white dark:text-white drop-shadow-md">
-                     1,204
-                   </span>
-                </div>
-
-                <div className="flex flex-col items-center md:items-start w-full md:w-auto">
-                   <span className="text-sm text-white dark:text-white uppercase tracking-[0.25em] font-mono mb-2 font-bold flex items-center gap-2 drop-shadow-sm">
-                     <Icons.Cpu size={16} className="text-white" /> {t.hero.stats.nodes}
-                   </span>
-                   <span className="text-4xl font-mono font-bold text-white dark:text-white flex items-center gap-2 drop-shadow-md">
-                     12 <span className="w-3 h-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]"></span>
-                   </span>
-                </div>
-
-             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Olympians Section */}
-      <section id="olympians" className="py-24 bg-[#050b14] dark:bg-[#050b14] relative transition-colors duration-300">
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-500/20 dark:via-brand-900 to-transparent opacity-50"></div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-white dark:text-white tracking-tight drop-shadow-sm dark:drop-shadow-md">{t.olympians.title}</h2>
-            <p className="text-brand-300 dark:text-brand-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed drop-shadow-sm">{t.olympians.subtitle}</p>
-            <p className="text-slate-300 dark:text-slate-200 mt-6 max-w-4xl mx-auto leading-relaxed">{t.olympians.desc}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {Object.entries(t.olympians.gods).map(([key, data]) => {
-              const god = data as { name: string; industry: string; desc: string };
-              const config = getGodConfig(key);
-              const Icon = config.icon;
-              return (
-                <div key={key} className={`group relative bg-[#0f172a] dark:bg-[#0f172a] border border-slate-800 dark:border-slate-800 p-8 hover:bg-[#1e293B] dark:hover:bg-[#1e293B] transition-all duration-300 ease-out hover:scale-[1.02] ${config.border} hover:shadow-2xl dark:hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] overflow-hidden rounded-lg`}>
-                  {/* Hover Glow Background */}
-                  <div className={`absolute -right-10 -top-10 w-40 h-40 ${config.bg} rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative z-10">
-                    <div className={`w-14 h-14 rounded-lg bg-[#020617] dark:bg-[#020617] border border-slate-700 dark:border-slate-700 flex items-center justify-center mb-6 ${config.shadow} group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`w-8 h-8 ${config.color}`} />
-                    </div>
-                    <h3 className={`text-2xl font-display font-bold text-white dark:text-white mb-2 group-hover:${config.color} transition-colors`}>{god.name}</h3>
-                    <div className={`text-xs font-mono uppercase tracking-widest ${config.color} mb-4 opacity-80`}>{god.industry}</div>
-                    <p className="text-slate-300 dark:text-slate-300 text-sm leading-relaxed group-hover:text-white dark:group-hover:text-white transition-colors">{god.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -399,62 +295,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white dark:text-white group-hover:text-blue-300 dark:group-hover:text-blue-300 transition-colors">{t.features.treasury_title}</h3>
               <p className="text-slate-200 dark:text-slate-300 leading-relaxed group-hover:text-white dark:group-hover:text-slate-200">{t.features.treasury_desc}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Showcase Section */}
-      <section id="assets" className="py-24 bg-[#0A0F1A] dark:bg-[#0A0F1A] border-t border-slate-800 dark:border-slate-800 relative overflow-hidden transition-colors duration-300">
-        {/* Subtle background glow */}
-        <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-brand-900/10 dark:bg-brand-900/10 blur-[100px] rounded-full pointer-events-none"></div>
-
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-white dark:text-white drop-shadow-sm dark:drop-shadow-md">
-              {t.showcase.title} <br />
-              <span className="text-brand-400 dark:text-brand-400 text-glow">{t.showcase.title_highlight}</span>
-            </h2>
-            <p className="text-lg text-slate-200 dark:text-slate-200 mb-10 leading-relaxed max-w-lg">
-              {t.showcase.desc}
-            </p>
-            
-            <ul className="space-y-6 mb-10">
-              {[t.showcase.list1, t.showcase.list2, t.showcase.list3].map((item, index) => (
-                <li key={index} className="flex items-center gap-4 text-slate-200 dark:text-slate-200 group">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500/10 dark:bg-brand-500/10 border border-brand-500/30 dark:border-brand-500/30 flex items-center justify-center text-brand-400 dark:text-brand-400 group-hover:bg-brand-500 group-hover:text-black transition-all">
-                    <Icons.Check size={16} />
-                  </span>
-                  <span className="group-hover:text-white dark:group-hover:text-white transition-colors">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <button className="bg-white dark:bg-white text-black dark:text-black hover:bg-brand-50 dark:hover:bg-brand-50 px-8 py-4 rounded-sm font-bold font-display uppercase tracking-wider transition-all shadow-lg dark:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(45,212,191,0.4)] flex items-center gap-2 group">
-              {t.showcase.btn} <Icons.ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-          
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/20 dark:from-brand-500/20 to-purple-500/20 dark:to-purple-500/20 blur-[60px] rounded-full group-hover:opacity-75 transition-opacity duration-700"></div>
-            <div className="relative z-10 bg-[#0f172a] dark:bg-[#0f172a] border border-slate-700 dark:border-slate-700 p-2 rounded-2xl shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500">
-               <LazyImage 
-                 src={LOGO_URL}
-                 alt="SEPT Asset Showcase"
-                 className="w-full h-auto rounded-xl"
-                 imageClassName="object-cover rounded-xl border border-slate-800 dark:border-slate-800"
-               />
-               
-               {/* Floating Badge */}
-               <div className="absolute -bottom-6 -left-6 bg-[#020617] dark:bg-[#020617] border border-slate-700 dark:border-slate-700 p-4 rounded-lg shadow-xl flex items-center gap-4 animate-float">
-                  <div className="w-10 h-10 rounded-full bg-green-500/10 dark:bg-green-500/10 flex items-center justify-center text-green-400 dark:text-green-400">
-                    <Icons.TrendingUp size={20} />
-                  </div>
-                  <div>
-                    <div className="text-[10px] text-slate-400 dark:text-slate-400 uppercase tracking-wider font-mono">Growth</div>
-                    <div className="text-xl font-bold text-white dark:text-white font-mono">+128.5%</div>
-                  </div>
-               </div>
             </div>
           </div>
         </div>
