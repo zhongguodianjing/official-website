@@ -290,7 +290,7 @@ const Dashboard: React.FC = () => {
                            </div>
                         </div>
 
-                        <button className="w-full mt-auto bg-brand-600 hover:bg-brand-500 py-4 font-display font-bold text-sm shadow-md dark:shadow-[0_0_20px_rgba(20,184,166,0.2)] dark:hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] transition-all uppercase tracking-widest text-white border border-brand-400/20">
+                        <button className="w-full mt-auto bg-brand-600 hover:bg-brand-500 py-4 font-display font-bold text-sm shadow-md dark:shadow-[0_0_20px_rgba(20,184,166,0.2)] dark:hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] transition-all uppercase tracking-wider text-white border border-brand-400/20">
                            {t.dashboard.trade}
                         </button>
                      </div>

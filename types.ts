@@ -23,3 +23,12 @@ export enum ViewState {
 }
 
 export type Language = 'zh_CN' | 'zh_TW' | 'en';
+
+// Pinata 相关类型 (只读版本)
+export interface PinataFetchResult {
+  success: boolean;
+  data?: any;
+  error?: string;
+}
+
+// 移除上传相关的类型，因为我们只使用读取功能

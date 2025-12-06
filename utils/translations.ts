@@ -117,6 +117,16 @@ export const translations = {
       passed: '已生效',
       votes_for: '赞成',
       votes_against: '反对',
+    },
+    image: {
+      loadError: '图片加载失败',
+      noImage: '暂无图片',
+      loading: '加载中...'
+    },
+    cta: {
+      title: '准备好迎接未来了吗？',
+      desc: '加入数千名已经在体验去中心化金融和治理力量的用户。',
+      button: '启动终端'
     }
   },
   zh_TW: {
@@ -134,7 +144,7 @@ export const translations = {
       title_prefix: '共建',
       title_highlight: 'SEPT 數位生態',
       title_suffix: '由 DAO 治理驅動的未來',
-      desc: '國際電競委員會官方平台——SEPT。SEPT 不僅是連接十二大產業的樞紐，更是實體產業數位化轉型的引擎。我們幫助各行各業進行數位行銷與資產重構。通過強大的 DAO 治理系統，每一個個人和企業都能在此建立屬於自己的數位生態，發行數位資產，實現從實體到數位的跨越。',
+      desc: '國際電競委員會官方平台——SEPT。SEPT 不僅是連接十二大產業的樞紐，更是實體產業數位化轉型的引擎。我們幫助各行業進行數位行銷與資產重構。通過強大的 DAO 治理系統，每一個個人和企業都能在此建立屬於自己的數位生態，發行數位資產，實現從實體到數位的跨越。',
       launch: '進入 DAO 治理社區',
       whitepaper: '閱讀白皮書',
       stats: {
@@ -234,6 +244,16 @@ export const translations = {
       passed: '已生效',
       votes_for: '贊成',
       votes_against: '反對',
+    },
+    image: {
+      loadError: '圖片加載失敗',
+      noImage: '暫無圖片',
+      loading: '加載中...'
+    },
+    cta: {
+      title: '準備好迎接未來了嗎？',
+      desc: '加入數千名已經在體驗去中心化金融和治理力量的用戶。',
+      button: '啟動終端'
     }
   },
   en: {
@@ -351,6 +371,16 @@ export const translations = {
       passed: 'Passed',
       votes_for: 'For',
       votes_against: 'Against',
+    },
+    image: {
+      loadError: 'Failed to load image',
+      noImage: 'No image',
+      loading: 'Loading...'
+    },
+    cta: {
+      title: 'Ready to Enter the Future?',
+      desc: 'Join thousands of users already experiencing the power of decentralized finance and governance.',
+      button: 'Launch Terminal'
     }
   }
 };
