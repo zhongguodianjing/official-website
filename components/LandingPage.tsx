@@ -7,11 +7,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { Language } from '../types';
 import LazyImage from './LazyImage';
 
-interface LandingPageProps {
-  onEnterApp: () => void;
-}
-
-const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
+const LandingPage: React.FC = () => {
   const { t, language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -98,8 +94,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
             </div>
 
             <button 
-              onClick={onEnterApp}
-              className="hidden md:flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-full font-bold font-display tracking-wide transition-all shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:-translate-y-0.5"
+              className="hidden md:flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-full font-bold font-display tracking-wide transition-all shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:-translate-y-0.5 cursor-default"
             >
               {t.nav.enter} <Icons.ArrowRight size={16} />
             </button>
@@ -119,7 +114,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
           <div className="max-w-6xl mx-auto text-center w-full flex flex-col items-center">
             
             {/* Tag */}
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-brand-500/30 bg-[#0A0F1A] text-white dark:text-white text-sm font-bold mb-10 animate-fade-in-up shadow-[0_0_20px_rgba(20,184,166,0.1)] font-mono tracking-wide z-10 hover:border-brand-500/60 transition-colors">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-brand-500/30 bg-[#0A0F1A] text-brand-200 dark:text-brand-200 text-sm font-bold mb-10 animate-fade-in-up shadow-[0_0_20px_rgba(20,184,166,0.1)] font-mono tracking-wide z-10 hover:border-brand-500/60 transition-colors">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
@@ -149,8 +144,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-brand-500/10 blur-[60px] rounded-full -z-10 pointer-events-none"></div>
 
               <button 
-                onClick={onEnterApp}
-                className="w-full px-8 py-5 bg-white text-emerald-600 hover:text-emerald-700 rounded-sm font-display font-bold text-xl hover:bg-brand-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(45,212,191,0.6)] flex items-center justify-center gap-3 group border border-transparent hover:scale-[1.02] z-10"
+                className="w-full px-8 py-5 bg-white text-emerald-600 hover:text-emerald-700 rounded-sm font-display font-bold text-xl hover:bg-brand-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(45,212,191,0.6)] flex items-center justify-center gap-3 group border border-transparent hover:scale-[1.02] z-10 cursor-default"
               >
                  {t.hero.launch} <Icons.ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
