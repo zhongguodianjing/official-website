@@ -23,7 +23,7 @@ const LandingPage: React.FC = () => {
 
   const languages: { code: Language; label: string }[] = [
     { code: 'zh_CN', label: '简体中文' },
-    { code: 'zh_TW', label: '繁體中文' },
+    { code: 'zh_Hant', label: '繁體中文' },
     { code: 'en', label: 'English' },
   ];
 
@@ -73,7 +73,9 @@ const LandingPage: React.FC = () => {
                 className="flex items-center gap-2 text-slate-700 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md transition-colors border border-slate-300 dark:border-white/10 hover:border-slate-400 dark:hover:border-white/30 hover:bg-slate-100 dark:hover:bg-white/10 bg-white dark:bg-[#0f172a]"
               >
                 <Icons.Languages size={16} className="text-brand-500 dark:text-brand-400" />
-                <span className="text-xs font-bold uppercase font-mono">{language === 'zh_CN' ? 'CN' : language === 'zh_TW' ? 'TW' : 'EN'}</span>
+                <span className="text-xs font-bold uppercase font-mono">
+                  {language === 'zh_CN' ? '简体中文' : language === 'zh_Hant' ? '繁體中文' : 'English'}
+                </span>
                 <Icons.ChevronDown size={12} />
               </button>
               

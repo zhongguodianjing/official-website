@@ -22,7 +22,7 @@ export enum ViewState {
   DASHBOARD = 'DASHBOARD'
 }
 
-export type Language = 'zh_CN' | 'zh_TW' | 'en';
+export type Language = 'zh_CN' | 'zh_Hant' | 'en';
 
 // Pinata 相关类型 (只读版本)
 export interface PinataFetchResult {

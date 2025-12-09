@@ -256,6 +256,133 @@ export const translations = {
       button: '啟動終端'
     }
   },
+  zh_Hant: {
+    nav: {
+      governance: 'DAO 提案',
+      assets: '發行資產',
+      tokenomics: '發行規則',
+      industries: '十二產業',
+      olympians: '十二產業',
+      enter: '進入終端',
+      connect: '連接錢包',
+    },
+    hero: {
+      tag: 'SEPT：開啟數位新時代',
+      title_prefix: '共建',
+      title_highlight: 'SEPT 數位生態',
+      title_suffix: '由 DAO 治理驅動的未來',
+      desc: '國際電競委員會官方平台——SEPT。SEPT 不僅是連接十二大產業的樞紐，更是實體產業數位化轉型的引擎。我們幫助各行業進行數位行銷與資產重構。通過強大的 DAO 治理系統，每一個個人和企業都能在此建立屬於自己的數位生態，發行數位資產，實現從實體到數位的跨越。',
+      launch: '進入 DAO 治理社區',
+      whitepaper: '閱讀白皮書',
+      stats: {
+        price: 'SEPT 價格',
+        supply: '流通總量',
+        proposals: '治理提案',
+        nodes: '驗證節點'
+      }
+    },
+    olympians: {
+      title: 'SEPT：賦能數位經濟十二主神',
+      subtitle: '以通證連接產業，助力實體經濟數位化轉型',
+      desc: '電競早已超越了遊戲的範疇，它包羅萬象。SEPT 致力於利用區塊鏈技術推動這十二大產業板塊的數位化轉型。無論是傳統農業還是現代時尚，SEPT 都能為其提供全新的數位行銷方案，打破虛實壁壘，讓實體產業在數位經濟中煥發新生。',
+      gods: {
+        zeus: { name: '宙斯', industry: '電子競技產業', desc: '手握數據雷霆，在虛擬競技場降下絕對法則，主宰電競王座的無上榮光。' },
+        hera: { name: '赫拉', industry: '影視產業', desc: '以全息后冠編織銀幕神話，守護光影世界的家族榮耀與永恆經典。' },
+        athena: { name: '雅典娜', industry: '教育產業', desc: '揮動智慧長矛刺破無知，用AR圖譜構建理性殿堂，引領科技教育的文明覺醒。' },
+        apollo: { name: '阿波羅', industry: '音樂節慶產業', desc: '撥動光子琴弦共振全球律動，如太陽般普照視聽盛宴，重塑音樂節慶的狂歡秩序。' },
+        aphrodite: { name: '阿芙羅狄忒', industry: '時尚產業', desc: '從數據泡沫中誕生美之法則，以液態金屬織就未來霓裳，定義數位時代的傾城魅力。' },
+        ares: { name: '阿瑞斯', industry: '體育競技產業', desc: '佩戴智能面罩衝鋒陷陣，在生物力學中解析野性渴望，引爆體育競技的極限潛能。' },
+        artemis: { name: '阿爾忒彌斯', industry: '數位文旅產業', desc: '在虛擬叢林中張弓搭箭，通過VR導航獵取文明秘境，守護數位文旅的純淨月光。' },
+        hermes: { name: '赫爾墨斯', industry: '遊戲電商產業', desc: '腳踏飛翼穿梭代碼網絡，打破虛擬與現實的交易壁壘，不僅傳遞信息，更流通萬物價值。' },
+        dionysus: { name: '狄俄尼索斯', industry: '餐飲娛樂產業', desc: '在霓虹葡萄藤下釀造沉浸體驗，將全球美食數據化為狂歡美酒，讓人醉倒在數位娛樂的盛宴。' },
+        demeter: { name: '德墨忒爾', industry: '綠色農業產業', desc: '借光合算法模擬四季流轉，讓枯燥代碼開出綠色生機，在大地上不僅收穫糧食，更收穫可持續的未來。' },
+        hephaestus: { name: '赫菲斯托斯', industry: '硬體科技產業', desc: '在熔爐中鍛造晶片之心，以AR目鏡校準奈米精度，為數位世界鑄造最堅硬的硬體軀殼。' },
+        poseidon: { name: '波塞冬', industry: '海洋環保產業', desc: '揮舞三叉戟平息生態浪潮，通過傳感器網絡傾聽深海呼吸，守護蔚藍領域的數位疆界。' },
+      }
+    },
+    features: {
+      title: 'SEPT：價值互聯的核心',
+      desc: 'SEPT 平台打破了單一遊戲的邊界，DAO 社區治理作為 SEPT 運行的關鍵要素，賦能每一個生態成員。',
+      governance_title: '構建專屬數位生態',
+      governance_desc: 'DAO 社區不僅僅是投票工具，它是生態孵化器。在這裡，每個個人和企業都可以構建自己的微型生態系統，發起治理提案，決定資源分配，讓個人影響力轉化為實際的數位經濟價值。',
+      assets_title: '實體產業數位化轉型',
+      assets_desc: 'SEPT 為實體產業轉型提供全套解決方案。企業可以將品牌、服務或產品轉化為鏈上數位資產（NFT），通過 SEPT 進行全球化行銷，構建屬於自己的商業閉環。',
+      treasury_title: 'SEPT 通證經濟',
+      treasury_desc: 'SEPT 是連接十二大產業的血液。從支付、治理到激勵，SEPT 串聯起所有多元化活動，實現生態價值閉環。',
+    },
+    tokenomics: {
+      title: 'SEPT 發行規則與通證模型',
+      subtitle: '基于算法的價值共識體系',
+      total_supply: '總量 21,000,000 枚',
+      sections: {
+        genesis: { 
+          title: '創世發行 (頭礦)', 
+          amount: '100 萬枚', 
+          desc: '作為生態啟動的創世憑證，早期參與者享有恒定兑换比例。头矿售罄后将永久开启价值飞轮。',
+          price: '當前價格: 1 USDT / SEPT',
+          action: '立即認購 (Buy Now)' 
+        },
+        ecosystem: { 
+          title: '運營與生態激勵', 
+          amount: '800 萬枚', 
+          desc: '用於核心團隊建設、市場推廣及社區活躍度激勵。參與生態活動即有機會獲取空投獎勵。',
+          price: '社區回饋',
+          action: '參與幸運抽獎 (Draw)' 
+        },
+        industries: { 
+          title: '十二產業矩陣', 
+          amount: '1200 萬枚', 
+          desc: '精準分配至十二奥林匹斯產業板塊（100萬枚/板塊），作為各領域的底層流動性與價值錨點。',
+          price: '產業賦能',
+          action: '查看產業分布' 
+        }
+      },
+      bancor: {
+        title: 'Bancor 動態價值協議',
+        desc: '當 100 萬枚創世頭礦發行完畢後，系統將自動激活 Bancor 算法協議。SEPT 的價格將不再恆定，而是與全網持幣總量（連接儲備金）建立數學函數關係。隨著被持有量的增加，資產價值將按照預設曲線指數級增長。這不僅是通證，更是隨共識規模不斷增值的數位黃金。'
+      }
+    },
+    showcase: {
+      title: '參與 SEPT 生態',
+      title_highlight: '創造無限價值',
+      desc: 'SEPT 不僅僅是貨幣，更是開啟數位世界的鑰匙。通過 DAO 參與治理，創造資產，享受生態紅利。',
+      list1: '使用 SEPT 參與各類生態活動',
+      list2: '發行並交易企業/個人數位資產',
+      list3: 'DAO 提案權：決定生態未來走向',
+      btn: '瀏覽資產市場',
+    },
+    dashboard: {
+      title: 'SEPT 終端',
+      overview: '市場概覽',
+      governance: '治理投票',
+      assets: '數位金庫',
+      connected: '在線: User_01',
+      tvl: '生態總價值 (TVL)',
+      active_members: '活躍節點',
+      issued_assets: '流通資產數',
+      chart_title: 'SEPT/USDT 實時行情',
+      recent_proposals: '核心治理提案',
+      trending_assets: '熱門資產異動',
+      trade: '快速交易',
+      view_all: '完整列表',
+      go_market: '深度市場',
+      view_details: '詳情',
+      active: '進行中',
+      passed: '已生效',
+      votes_for: '贊成',
+      votes_against: '反對',
+    },
+    image: {
+      loadError: '圖片加載失敗',
+      noImage: '暫無圖片',
+      loading: '加載中...'
+    },
+    cta: {
+      title: '準備好迎接未來了嗎？',
+      desc: '加入數千名已經在體驗去中心化金融和治理力量的用戶。',
+      button: '啟動終端'
+    }
+  },
   en: {
     nav: {
       governance: 'DAO Proposals',
