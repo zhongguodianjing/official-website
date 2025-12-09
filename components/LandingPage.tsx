@@ -6,6 +6,9 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { Language } from '../types';
 import LazyImage from './LazyImage';
+import IPFSTest from './IPFSTest';
+import CIDTest from './CIDTest';
+import Logo from './logo';
 
 const LandingPage: React.FC = () => {
   const { t, language, setLanguage } = useLanguage();
@@ -20,7 +23,7 @@ const LandingPage: React.FC = () => {
 
   const languages: { code: Language; label: string }[] = [
     { code: 'zh_CN', label: '简体中文' },
-    { code: 'zh_TW', label: '繁體中文' },
+    { code: 'zh_Hant', label: '繁體中文' },
     { code: 'en', label: 'English' },
   ];
 
@@ -33,12 +36,9 @@ const LandingPage: React.FC = () => {
       <nav className="fixed top-0 w-full z-50 bg-[#0A0F1A] border-b border-[#1E293B] transition-all duration-300 shadow-lg dark:shadow-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-             <LazyImage 
-               src={LOGO_URL} 
-               alt="SEPT Logo" 
-               className="h-10 w-10 md:h-12 md:w-12"
-               imageClassName="object-contain drop-shadow-[0_0_15px_rgba(20,184,166,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(20,184,166,0.6)] transition-all duration-300 dark:invert-0 invert"
-             />
+               <div className="h-10 w-10 md:h-12 md:w-12">
+                 <Logo className="" />
+               </div>
              <div className="hidden sm:block">
                <h1 className="text-2xl font-bold tracking-tighter text-white dark:text-white font-display leading-none">SEPT</h1>
                <p className="text-[10px] text-white dark:text-white uppercase tracking-[0.2em] leading-none opacity-90 mt-1 font-medium">International Esports Committee</p>
@@ -59,13 +59,13 @@ const LandingPage: React.FC = () => {
 
           <div className="flex items-center gap-4">
              {/* Theme Toggle */}
-             <button
+             {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-md transition-colors border border-slate-300 dark:border-white/10 hover:border-brand-500 dark:hover:border-white/30 hover:bg-slate-100 dark:hover:bg-white/10 bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-100"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Icons.Sun size={16} className="text-yellow-400" /> : <Icons.Moon size={16} className="text-brand-600" />}
-            </button>
+            </button> */}
 
             <div className="relative">
               <button 
@@ -73,7 +73,9 @@ const LandingPage: React.FC = () => {
                 className="flex items-center gap-2 text-slate-700 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md transition-colors border border-slate-300 dark:border-white/10 hover:border-slate-400 dark:hover:border-white/30 hover:bg-slate-100 dark:hover:bg-white/10 bg-white dark:bg-[#0f172a]"
               >
                 <Icons.Languages size={16} className="text-brand-500 dark:text-brand-400" />
-                <span className="text-xs font-bold uppercase font-mono">{language === 'zh_CN' ? 'CN' : language === 'zh_TW' ? 'TW' : 'EN'}</span>
+                <span className="text-xs font-bold uppercase font-mono">
+                  {language === 'zh_CN' ? '简体中文' : language === 'zh_Hant' ? '繁體中文' : 'English'}
+                </span>
                 <Icons.ChevronDown size={12} />
               </button>
               
@@ -93,11 +95,14 @@ const LandingPage: React.FC = () => {
               )}
             </div>
 
-            <button 
-              className="hidden md:flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-full font-bold font-display tracking-wide transition-all shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:-translate-y-0.5 cursor-default"
+            <a 
+              href="https://dao.e-sport.show/dao/polygon-mainnet/0xd597CEe11FE80f9BFd62b189b7617E9c2F3A3391/dashboard?members=admin&proposals=all" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-full font-bold font-display tracking-wide transition-all shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:-translate-y-0.5 cursor-pointer"
             >
               {t.nav.enter} <Icons.ArrowRight size={16} />
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -143,11 +148,14 @@ const LandingPage: React.FC = () => {
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 w-full max-w-md animate-fade-in-up [animation-delay:600ms]">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-brand-500/10 blur-[60px] rounded-full -z-10 pointer-events-none"></div>
 
-              <button 
-                className="w-full px-8 py-5 bg-white text-emerald-600 hover:text-emerald-700 rounded-sm font-display font-bold text-xl hover:bg-brand-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(45,212,191,0.6)] flex items-center justify-center gap-3 group border border-transparent hover:scale-[1.02] z-10 cursor-default"
+              <a 
+                href="https://dao.e-sport.show" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-8 py-5 bg-white text-emerald-600 hover:text-emerald-700 rounded-sm font-display font-bold text-xl hover:bg-brand-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(45,212,191,0.6)] flex items-center justify-center gap-3 group border border-transparent hover:scale-[1.02] z-10 cursor-pointer"
               >
                  {t.hero.launch} <Icons.ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -205,7 +213,10 @@ const LandingPage: React.FC = () => {
                    <div className="text-xs text-slate-400 dark:text-slate-400 mb-1 font-mono uppercase">Current Price</div>
                    <div className="text-lg font-bold text-yellow-400 dark:text-yellow-400 font-mono">$1.00 USDT</div>
                 </div>
-                <button className="w-full py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg">
+                <button 
+                  onClick={() => window.open('https://dao.e-sport.show/dao/polygon-mainnet/0xd597CEe11FE80f9BFd62b189b7617E9c2F3A3391/ico/0x4186e32695BbF3D123920304Ba3D45b8f520E4c0/1', '_blank')}
+                  className="w-full py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg"
+                >
                    {t.tokenomics.sections.genesis.action}
                 </button>
              </div>
@@ -227,7 +238,10 @@ const LandingPage: React.FC = () => {
                    <div className="text-xs text-slate-400 dark:text-slate-400 mb-1 font-mono uppercase">Incentive</div>
                    <div className="text-lg font-bold text-brand-400 dark:text-brand-400 font-mono">{t.tokenomics.sections.ecosystem.price}</div>
                 </div>
-                <button className="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg">
+                <button 
+                  onClick={() => window.open('https://dao.e-sport.show/dao/polygon-mainnet/0xd597CEe11FE80f9BFd62b189b7617E9c2F3A3391/draw/0x5090283f856a72Ac659b003dC079b510A7F69b4E', '_blank')}
+                  className="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg"
+                >
                    {t.tokenomics.sections.ecosystem.action}
                 </button>
              </div>
@@ -294,15 +308,30 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col items-center justify-center gap-8">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white dark:text-white mb-4 drop-shadow-sm dark:drop-shadow-md">{t.cta.title}</h2>
+            <p className="text-slate-300 dark:text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">{t.cta.desc}</p>
+            <a 
+              href="https://dao.e-sport.show/dao/polygon-mainnet/0xd597CEe11FE80f9BFd62b189b7617E9c2F3A3391/dashboard?members=admin&proposals=all" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full md:w-auto px-8 py-5 bg-brand-600 hover:bg-brand-500 text-white font-bold uppercase tracking-wider text-xl transition-all shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_40px_rgba(20,184,166,0.5)] hover:-translate-y-0.5 cursor-pointer flex items-center justify-center gap-2"
+            >
+              {t.cta.button} <Icons.ArrowRight size={16} />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-[#020617] dark:bg-[#020617] border-t border-slate-800 dark:border-slate-800 py-12 text-center relative z-10 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
-          <LazyImage 
-             src={LOGO_URL} 
-             alt="SEPT Logo" 
-             className="h-10 w-10 mx-auto mb-6"
-             imageClassName="object-contain opacity-50 dark:invert-0 invert grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-           />
+          <div className="h-10 w-10 mx-auto mb-6">
+            <Logo />
+          </div>
           <p className="text-slate-400 dark:text-slate-400 text-sm font-mono tracking-widest uppercase">&copy; 2024 International Esports Committee. All Rights Reserved.</p>
         </div>
       </footer>
