@@ -147,7 +147,7 @@ const Dashboard: React.FC = () => {
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Icons.Sun size={16} className="text-yellow-400" /> : <Icons.Moon size={16} className="text-brand-600" />}
-            </button>
+            </button> */
 
             <div className="hidden md:flex items-center gap-3 bg-slate-100 dark:bg-[#0b1221] px-4 py-2 rounded text-xs font-mono border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-200">
                <span className="w-2 h-2 bg-brand-500 rounded-full shadow-[0_0_8px_#14b8a6]"></span>

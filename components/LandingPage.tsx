@@ -59,13 +59,13 @@ const LandingPage: React.FC = () => {
 
           <div className="flex items-center gap-4">
              {/* Theme Toggle */}
-             <button
+             {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-md transition-colors border border-slate-300 dark:border-white/10 hover:border-brand-500 dark:hover:border-white/30 hover:bg-slate-100 dark:hover:bg-white/10 bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-100"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Icons.Sun size={16} className="text-yellow-400" /> : <Icons.Moon size={16} className="text-brand-600" />}
-            </button>
+            </button> */}
 
             <div className="relative">
               <button 
@@ -211,7 +211,10 @@ const LandingPage: React.FC = () => {
                    <div className="text-xs text-slate-400 dark:text-slate-400 mb-1 font-mono uppercase">Current Price</div>
                    <div className="text-lg font-bold text-yellow-400 dark:text-yellow-400 font-mono">$1.00 USDT</div>
                 </div>
-                <button className="w-full py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg">
+                <button 
+                  onClick={() => window.open('https://dao.e-sport.show/dao/polygon-mainnet/0xd597CEe11FE80f9BFd62b189b7617E9c2F3A3391/ico/0x4186e32695BbF3D123920304Ba3D45b8f520E4c0/1', '_blank')}
+                  className="w-full py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg"
+                >
                    {t.tokenomics.sections.genesis.action}
                 </button>
              </div>
@@ -233,7 +236,10 @@ const LandingPage: React.FC = () => {
                    <div className="text-xs text-slate-400 dark:text-slate-400 mb-1 font-mono uppercase">Incentive</div>
                    <div className="text-lg font-bold text-brand-400 dark:text-brand-400 font-mono">{t.tokenomics.sections.ecosystem.price}</div>
                 </div>
-                <button className="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg">
+                <button 
+                  onClick={() => window.open('https://dao.e-sport.show/dao/polygon-mainnet/0xd597CEe11FE80f9BFd62b189b7617E9c2F3A3391/draw/0x5090283f856a72Ac659b003dC079b510A7F69b4E', '_blank')}
+                  className="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg"
+                >
                    {t.tokenomics.sections.ecosystem.action}
                 </button>
              </div>
